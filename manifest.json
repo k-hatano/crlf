@@ -1,0 +1,38 @@
+{
+	"manifest_version": 2,
+	"name": "__MSG_appName__",
+	"default_locale": "en",
+	"version": "1.0",
+	"description": "__MSG_appDescription__",
+     "background": {
+        "scripts": ["background.js"],
+    	"persistent": true
+     },
+	"permissions": [
+		"windows",
+		"tabs",
+		"activeTab",
+		"contextMenus",
+		"storage",
+		"http://*/*",
+		"https://*/*",
+		"<all_urls>"
+	],
+	"icons": {
+		"16": "crlf_16.png",
+		"32": "crlf_32.png"
+	},
+	"content_scripts": [
+	{
+		"matches": ["http://*/*", "https://*/*"],
+		"js": ["content.js"],
+		"run_at": "document_end"
+	}
+	],
+	"browser_action": {
+		"default_icon": {
+			"16": "crlf_16.png",
+			"32": "crlf_32.png"
+		}
+	}
+}
