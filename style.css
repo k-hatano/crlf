@@ -1,1 +1,21 @@
 
+#message {
+	color: lime;
+}
+
+#caution {
+	color: red;
+}
+
+#content {
+	font-size: medium;
+	font-family: monospace;
+}
+
+.cr {
+	background: red;
+}
+
+.lf {
+	background: lime;
+}
