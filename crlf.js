@@ -28,6 +28,16 @@ chrome.windows.getCurrent(function(currentWindow){
 								continue;
 							}
 
+							if (content.charCodeAt(0) == 0x2028) {
+								result += "<span class='lsep'>LSEP</span>";
+								content = content.substring(1);
+								continue;
+							}
+							if (content.charCodeAt(0) == 0x2029) {
+								result += "<span class='psep'>PSEP</span>";
+								content = content.substring(1);
+								continue;
+							}
 							if (content.charAt(0) == "\t") {
 								result += "&emsp;";
 								content = content.substring(1);
